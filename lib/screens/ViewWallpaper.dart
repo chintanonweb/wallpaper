@@ -99,7 +99,6 @@ class _ViewWallpaperState extends State<ViewWallpaper> {
       context: context,
       builder: (context) {
         return Dialog(
-          backgroundColor: Colors.white,
           child: Column(
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -111,18 +110,15 @@ class _ViewWallpaperState extends State<ViewWallpaper> {
                   style: TextStyle(
                     fontSize: 20.0,
                     fontWeight: FontWeight.bold,
-                    color: Colors.black,
                   ),
                 ),
               ),
               ListTile(
                 title: Text(
                   'Home Screen',
-                  style: TextStyle(color: Colors.black),
                 ),
                 leading: Icon(
                   Icons.home,
-                  color: Colors.black,
                 ),
                 onTap: () {
                   progressString = Wallpaper.ImageDownloadProgress(widget.url);
@@ -151,11 +147,9 @@ class _ViewWallpaperState extends State<ViewWallpaper> {
               ListTile(
                 title: Text(
                   'Lock Screen',
-                  style: TextStyle(color: Colors.black),
                 ),
                 leading: Icon(
                   Icons.lock,
-                  color: Colors.black,
                 ),
                 onTap: () {
                   progressString = Wallpaper.ImageDownloadProgress(widget.url);
@@ -184,11 +178,9 @@ class _ViewWallpaperState extends State<ViewWallpaper> {
               ListTile(
                 title: Text(
                   'Both',
-                  style: TextStyle(color: Colors.black),
                 ),
                 leading: Icon(
                   Icons.phone_android,
-                  color: Colors.black,
                 ),
                 onTap: () {
                   progressString = Wallpaper.ImageDownloadProgress(widget.url);

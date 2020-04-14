@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:wallpapers/screens/BottomNavBar.dart';
-
+import 'package:theme_provider/theme_provider.dart';
 
 void main() => runApp(MyApp());
 
@@ -8,12 +8,15 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
+    return ThemeProvider(
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: ThemeConsumer(
+          child: MyHomePage(),
+        ),
       ),
-      home: MyHomePage(),
+      saveThemesOnChange: true,
+      loadThemeOnInit: true,
     );
   }
 }
@@ -28,7 +31,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(

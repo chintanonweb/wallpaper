@@ -36,7 +36,6 @@ class _HomeState extends State<Home> {
                 style: TextStyle(
                     fontFamily: 'Sans',
                     fontWeight: FontWeight.bold,
-                    color: Colors.black,
                     fontSize: 24),
               ),
               new Container(
@@ -83,7 +82,6 @@ class _HomeState extends State<Home> {
                 style: TextStyle(
                     fontFamily: 'Sans',
                     fontWeight: FontWeight.bold,
-                    color: Colors.black,
                     fontSize: 24),
               ),
               GridView.builder(

@@ -35,7 +35,6 @@ class _ViewCategoryState extends State<ViewCategory> {
                 style: TextStyle(
                     fontFamily: 'Sans',
                     fontWeight: FontWeight.bold,
-                    color: Colors.black,
                     fontSize: 24),
               ),
               Container(
