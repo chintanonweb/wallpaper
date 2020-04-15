@@ -12,9 +12,7 @@ class ViewWallpaper extends StatefulWidget {
 }
 
 class _ViewWallpaperState extends State<ViewWallpaper> {
-  String home = "Home Screen",
-      lock = "Lock Screen",
-      both = "Both Screen";
+  String home = "Home Screen", lock = "Lock Screen", both = "Both Screen";
 
   Stream<String> progressString;
   String res;
@@ -108,14 +106,18 @@ class _ViewWallpaperState extends State<ViewWallpaper> {
                 child: Text(
                   'Set a wallpaper',
                   style: TextStyle(
-                    fontSize: 20.0,
-                    fontWeight: FontWeight.bold,
-                  ),
+                      fontFamily: 'Sans',
+                      fontWeight: FontWeight.bold,
+                      fontSize: 24),
                 ),
               ),
               ListTile(
                 title: Text(
                   'Home Screen',
+                  style: TextStyle(
+                    fontFamily: 'Sans',
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
                 leading: Icon(
                   Icons.home,
@@ -147,6 +149,10 @@ class _ViewWallpaperState extends State<ViewWallpaper> {
               ListTile(
                 title: Text(
                   'Lock Screen',
+                  style: TextStyle(
+                    fontFamily: 'Sans',
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
                 leading: Icon(
                   Icons.lock,
@@ -178,6 +184,10 @@ class _ViewWallpaperState extends State<ViewWallpaper> {
               ListTile(
                 title: Text(
                   'Both',
+                  style: TextStyle(
+                    fontFamily: 'Sans',
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
                 leading: Icon(
                   Icons.phone_android,
@@ -226,7 +236,10 @@ class _ViewWallpaperState extends State<ViewWallpaper> {
             backgroundColor: Colors.grey.withOpacity(0.8),
             title: Text(
               'Set Wallpaper Successfully',
-              style: TextStyle(color: Colors.white),
+              style: TextStyle(
+                fontFamily: 'Sans',
+                fontWeight: FontWeight.bold,
+              ),
             ),
           );
         });
@@ -250,7 +263,10 @@ class _ViewWallpaperState extends State<ViewWallpaper> {
                         SizedBox(height: 20.0),
                         Text(
                           "Downloading File : $res",
-                          style: TextStyle(color: Colors.white),
+                          style: TextStyle(
+                            fontFamily: 'Sans',
+                            fontWeight: FontWeight.bold,
+                          ),
                         )
                       ],
                     ),

@@ -16,8 +16,9 @@ class _BottomNavBarState extends State<BottomNavBar> {
       _selectedIndex = index;
     });
   }
+
   @override
-Widget build(BuildContext context) {
+  Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
         child: _widgetOptions.elementAt(_selectedIndex),
@@ -26,15 +27,33 @@ Widget build(BuildContext context) {
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
-            title: Text('Home'),
+            title: Text(
+              'Home',
+              style: TextStyle(
+                fontFamily: 'Sans',
+                fontWeight: FontWeight.bold,
+              ),
+            ),
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.category),
-            title: Text('Category'),
+            title: Text(
+              'Category',
+              style: TextStyle(
+                fontFamily: 'Sans',
+                fontWeight: FontWeight.bold,
+              ),
+            ),
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.settings),
-            title: Text('Setting'),
+            title: Text(
+              'Setting',
+              style: TextStyle(
+                fontFamily: 'Sans',
+                fontWeight: FontWeight.bold,
+              ),
+            ),
           ),
         ],
         currentIndex: _selectedIndex,

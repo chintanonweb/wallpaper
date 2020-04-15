@@ -19,15 +19,7 @@ class Setting extends StatelessWidget {
   }
 }
 
-class SettingPage extends StatefulWidget {
-  SettingPage({Key key, this.title}) : super(key: key);
-  final String title;
-
-  @override
-  _SettingPageState createState() => _SettingPageState();
-}
-
-class _SettingPageState extends State<SettingPage> {
+class SettingPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -51,17 +43,22 @@ class _SettingPageState extends State<SettingPage> {
                   title: Text(
                     'Theme',
                     style: TextStyle(
+                      fontFamily: 'Sans',
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  subtitle: Text('Select the way you app looks.'),
+                  subtitle: Text(
+                    'Select the way you app looks.',
+                    style: TextStyle(
+                      fontFamily: 'Sans',
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
                 ),
                 onTap: () {
-                  setState(() {
-                    showDialog(
-                        context: context,
-                        builder: (_) => ThemeConsumer(child: ThemeDialog()));
-                  });
+                  showDialog(
+                      context: context,
+                      builder: (_) => ThemeConsumer(child: ThemeDialog()));
                 },
               ),
             ),
@@ -79,6 +76,7 @@ class _SettingPageState extends State<SettingPage> {
                   title: Text(
                     'About',
                     style: TextStyle(
+                      fontFamily: 'Sans',
                       fontWeight: FontWeight.bold,
                     ),
                   ),
@@ -90,18 +88,19 @@ class _SettingPageState extends State<SettingPage> {
                       shape: RoundedRectangleBorder(
                           borderRadius:
                               BorderRadius.all(Radius.circular(15.0))),
-                      title: new Text("About"),
+                      title: new Text(
+                        "About",
+                        style: TextStyle(
+                          fontFamily: 'Sans',
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
                       content: Text(
                         "This Application is an initiative by Shree hari Infotech in order to provide best high quality Wallpaper. The wallpapers displayed in this application are provided by some other platform.",
+                        style: TextStyle(
+                          fontFamily: 'Sans',
+                        ),
                       ),
-                      actions: <Widget>[
-                        new FlatButton(
-                          child: new Text('Close'),
-                          onPressed: () {
-                            Navigator.of(context).pop();
-                          },
-                        )
-                      ],
                     ),
                   );
                 },

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:wallpapers/screens/BottomNavBar.dart';
+import 'package:wallpapers/screens/splashscreen.dart';
 import 'package:theme_provider/theme_provider.dart';
 
 void main() => runApp(MyApp());
@@ -9,14 +9,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ThemeProvider(
+      saveThemesOnChange: true,
+      loadThemeOnInit: true,
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         home: ThemeConsumer(
           child: MyHomePage(),
         ),
       ),
-      saveThemesOnChange: true,
-      loadThemeOnInit: true,
     );
   }
 }
@@ -31,10 +31,11 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: BottomNavBar(),
+      body: SplashScreen(),
     );
   }
 }

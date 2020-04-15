@@ -91,11 +91,11 @@ class _ViewCategoryState extends State<ViewCategory> {
 
   Future getdb() async {
     var settings = new ConnectionSettings(
-        host: '192.168.43.24',
+        host: 'remotemysql.com',
         port: 3306,
-        user: 'shi',
-        password: 'shi',
-        db: 'wallpaper');
+        user: 'dGvHHrKOPT',
+        password: 'FANjLTqbHT',
+        db: 'dGvHHrKOPT');
     var conn = await MySqlConnection.connect(settings);
     var catid = widget.id;
     var results =
